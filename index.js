@@ -193,22 +193,40 @@
 
 // Desafio 04
 
-const faturamentoPorEstado = {
-    SP: 67836.43,
-    RJ: 36678.66,
-    MG: 29229.88,
-    ES: 27165.48,
-    Outros: 19849.53,
-};
+// const faturamentoPorEstado = {
+//     SP: 67836.43,
+//     RJ: 36678.66,
+//     MG: 29229.88,
+//     ES: 27165.48,
+//     Outros: 19849.53,
+// };
 
-const faturamentoTotal = Object.values(faturamentoPorEstado).reduce((acc, valor) => acc + valor, 0);
+// const faturamentoTotal = Object.values(faturamentoPorEstado).reduce((acc, valor) => acc + valor, 0);
 
-const percentuais = Object.entries(faturamentoPorEstado).map(([estado, valor]) => {
-    const percentual = (valor / faturamentoTotal) * 100;
-    return { estado, percentual: percentual.toFixed(2) };
-});
+// const percentuais = Object.entries(faturamentoPorEstado).map(([estado, valor]) => {
+//     const percentual = (valor / faturamentoTotal) * 100;
+//     return { estado, percentual: percentual.toFixed(2) };
+// });
 
-console.log("Percentual de representação por estado:");
-percentuais.forEach(({ estado, percentual }) => {
-    console.log(`${estado}: ${percentual}%`);
-});
+// console.log("Percentual de representação por estado:");
+// percentuais.forEach(({ estado, percentual }) => {
+//     console.log(`${estado}: ${percentual}%`);
+// });
+
+// Desafio 05
+
+const inverterString = (str) => {
+    let stringInvertida = "";
+    
+    for (let i = str.length - 1; i >= 0; i--) {
+        stringInvertida += str[i];
+    }
+    
+    return stringInvertida;
+}
+
+const entrada = "Exemplo de string";
+const resultado = inverterString(entrada);
+
+console.log(`String original: ${entrada}`);
+console.log(`String invertida: ${resultado}`);
